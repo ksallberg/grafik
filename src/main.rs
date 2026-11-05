@@ -1,0 +1,22 @@
+use nannou::prelude::*;
+
+fn main() {
+    nannou::app(model)
+        .update(update)
+        .simple_window(view)
+        .run();
+}
+
+struct Model {}
+
+fn model(_app: &App) -> Model {
+    Model {}
+}
+
+fn update(_app: &App, _model: &mut Model) {
+}
+
+fn view(app: &App, _model: &Model, _window: Entity) {
+    let draw = app.draw();
+    draw.background().color(PURPLE);
+}
